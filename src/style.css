@@ -26,3 +26,11 @@
 .numero {
   padding-bottom: 38px;
 }
+.button {
+  margin-top: 200px;
+  width: 280px;
+  background-color: rgb(169, 177, 248);
+  font-weight: bold;
+  height: 100px;
+  font-size: 16px;
+}

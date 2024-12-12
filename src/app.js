@@ -7,7 +7,6 @@ import "./assets/img/4geeks.ico";
 
 window.onload = function() {
   let paloAleatorio;
-  //write your code here
   function generadorCartas() {
     let palos = ["♦", "♥", "♠", "♣"];
     let numeros = [
@@ -31,16 +30,24 @@ window.onload = function() {
     document.querySelector(".palo").innerHTML = paloAleatorio;
     document.querySelector(".palo2").innerHTML = paloAleatorio;
     document.querySelector(".numero").innerHTML = numeroAleatorio;
+
+    console.log(colorPalos());
+    colorPalos();
   }
-  generadorCartas();
 
   function colorPalos() {
     if (paloAleatorio === "♥" || paloAleatorio === "♦") {
       document.querySelector(".palo").style.color = "red";
       document.querySelector(".palo2").style.color = "red";
+    } else if (paloAleatorio === "♠" || paloAleatorio === "♣") {
+      document.querySelector(".palo").style.color = "black";
+      document.querySelector(".palo2").style.color = "black";
     }
   }
-  colorPalos();
+
+  generadorCartas();
+
+  const intervalID = setInterval(generadorCartas, 10000);
 };
 
 //PSEUDOCODIGO:
